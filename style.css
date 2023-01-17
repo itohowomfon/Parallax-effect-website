@@ -1,0 +1,53 @@
+body {
+    margin: 0
+}
+
+/* Scrolling content */
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.background,.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title {
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+section {
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Notes
+z axis - how far away is something from you, closer or farther away from the screen 
+Parallax - elements move at different speed on the page, the things that are closer move faster */
